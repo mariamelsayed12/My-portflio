@@ -1,0 +1,197 @@
+import { motion } from 'framer-motion';
+import { Code, Palette, Database, Wrench } from 'lucide-react';
+
+export const Skills = () => {
+  const skillCategories = [
+    {
+      title: 'Frontend',
+      icon: Code,
+      color: 'from-blue-500 to-cyan-500',
+      skills: [
+        { name: 'React', level: 95 },
+        { name: 'TypeScript', level: 90 },
+        { name: 'Next.js', level: 85 },
+        { name: 'Tailwind CSS', level: 92 },
+        { name: 'Framer Motion', level: 80 },
+      ]
+    },
+    {
+      title: 'Design',
+      icon: Palette,
+      color: 'from-purple-500 to-pink-500',
+      skills: [
+        { name: 'UI/UX Design', level: 85 },
+        { name: 'Figma', level: 88 },
+        { name: 'Adobe XD', level: 75 },
+        { name: 'Responsive Design', level: 95 },
+        { name: 'Animation', level: 82 },
+      ]
+    },
+    {
+      title: 'Backend',
+      icon: Database,
+      color: 'from-green-500 to-emerald-500',
+      skills: [
+        { name: 'Node.js', level: 80 },
+        { name: 'Express', level: 75 },
+        { name: 'MongoDB', level: 70 },
+        { name: 'PostgreSQL', level: 72 },
+        { name: 'REST APIs', level: 85 },
+      ]
+    },
+    {
+      title: 'Tools',
+      icon: Wrench,
+      color: 'from-orange-500 to-red-500',
+      skills: [
+        { name: 'Git', level: 90 },
+        { name: 'Webpack', level: 75 },
+        { name: 'Vite', level: 85 },
+        { name: 'Docker', level: 65 },
+        { name: 'AWS', level: 60 },
+      ]
+    }
+  ];
+
+  return (
+    <section id="skills" className="py-20 bg-gray-50 dark:bg-gray-800 relative overflow-hidden">
+      {/* Animated Background Elements */}
+      <div className="absolute inset-0">
+        {[...Array(15)].map((_, i) => (
+          <motion.div
+            key={i}
+            className="absolute w-1 h-1 bg-primary-400 rounded-full opacity-30"
+            style={{
+              left: `${Math.random() * 100}%`,
+              top: `${Math.random() * 100}%`,
+            }}
+            animate={{
+              scale: [1, 1.5, 1],
+              opacity: [0.3, 0.8, 0.3],
+            }}
+            transition={{
+              duration: 2 + Math.random() * 2,
+              repeat: Infinity,
+              delay: Math.random() * 2,
+            }}
+          />
+        ))}
+      </div>
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <motion.div
+          className="text-center mb-16"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+        >
+          <h2 className="text-4xl sm:text-5xl font-bold mb-4">
+            <span className="bg-gradient-to-r from-primary-600 to-accent-600 bg-clip-text text-transparent">
+              Skills & Expertise
+            </span>
+          </h2>
+          <div className="w-24 h-1 bg-gradient-to-r from-primary-500 to-accent-500 mx-auto rounded-full" />
+          <p className="text-lg text-gray-600 dark:text-gray-300 mt-6 max-w-2xl mx-auto">
+            Here are the technologies and tools I work with to create amazing digital experiences
+          </p>
+        </motion.div>
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {skillCategories.map((category, categoryIndex) => (
+            <motion.div
+              key={category.title}
+              className="bg-white dark:bg-gray-900 rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 dark:border-gray-700"
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: categoryIndex * 0.1, duration: 0.6 }}
+              viewport={{ once: true }}
+              whileHover={{ y: -5 }}
+            >
+              <motion.div
+                className={`w-12 h-12 rounded-xl bg-gradient-to-r ${category.color} flex items-center justify-center mb-6`}
+                whileHover={{ scale: 1.1, rotate: 5 }}
+                transition={{ duration: 0.3 }}
+              >
+                <category.icon className="text-white" size={24} />
+              </motion.div>
+
+              <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-6">
+                {category.title}
+              </h3>
+
+              <div className="space-y-4">
+                {category.skills.map((skill, skillIndex) => (
+                  <motion.div
+                    key={skill.name}
+                    initial={{ opacity: 0, x: -20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ delay: (categoryIndex * 0.1) + (skillIndex * 0.05), duration: 0.4 }}
+                    viewport={{ once: true }}
+                  >
+                    <div className="flex justify-between items-center mb-2">
+                      <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
+                        {skill.name}
+                      </span>
+                      <span className="text-sm text-gray-500 dark:text-gray-400">
+                        {skill.level}%
+                      </span>
+                    </div>
+                    <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
+                      <motion.div
+                        className={`h-2 rounded-full bg-gradient-to-r ${category.color}`}
+                        initial={{ width: 0 }}
+                        whileInView={{ width: `${skill.level}%` }}
+                        transition={{ delay: (categoryIndex * 0.1) + (skillIndex * 0.05) + 0.2, duration: 0.8 }}
+                        viewport={{ once: true }}
+                      />
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+            </motion.div>
+          ))}
+        </div>
+
+        {/* Stats Section */}
+        <motion.div
+          className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.4, duration: 0.6 }}
+          viewport={{ once: true }}
+        >
+          {[
+            { number: '50+', label: 'Projects Completed' },
+            { number: '5+', label: 'Years Experience' },
+            { number: '30+', label: 'Happy Clients' },
+            { number: '15+', label: 'Technologies' },
+          ].map((stat, index) => (
+            <motion.div
+              key={stat.label}
+              className="text-center"
+              initial={{ opacity: 0, scale: 0.5 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 0.5 + index * 0.1, duration: 0.5 }}
+              viewport={{ once: true }}
+              whileHover={{ scale: 1.05 }}
+            >
+              <motion.div
+                className="text-3xl sm:text-4xl font-bold bg-gradient-to-r from-primary-600 to-accent-600 bg-clip-text text-transparent mb-2"
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ delay: 0.7 + index * 0.1 }}
+                viewport={{ once: true }}
+              >
+                {stat.number}
+              </motion.div>
+              <div className="text-gray-600 dark:text-gray-400 font-medium">
+                {stat.label}
+              </div>
+            </motion.div>
+          ))}
+        </motion.div>
+      </div>
+    </section>
+  );
+};
