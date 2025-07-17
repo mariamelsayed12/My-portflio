@@ -40,7 +40,7 @@ export const Navigation = () => {
             className="text-2xl font-bold bg-gradient-to-r from-[#ffcb74] to-amber-300 dark:from-[#ffcb74] dark:to-[#f6f6f6] bg-clip-text text-transparent"
             whileHover={{ scale: 1.05 }}
           >
-            Portfolio
+            Mariam El-sayed
           </motion.div>
 
           {/* Desktop Navigation */}

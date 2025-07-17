@@ -11,7 +11,7 @@ export const Projects = () => {
       technologies: ['React', 'TypeScript', 'Tailwind CSS', 'Supabase', 'Chakra UI ',' APIs with Redux Toolkit Query'],
       liveUrl: 'https://full-stack-ecommerce-app-shopzy.vercel.app/',
       githubUrl: 'https://github.com/mariamelsayed12/FullStack-Ecommerce-App-Shopzy',
-      featured: true
+      featured: false
     },
     {
       id: 2,
@@ -20,8 +20,8 @@ export const Projects = () => {
       image: '/photo_2025-07-17_04-27-51.jpg',
       technologies: ['react-hot-toast','React Hook Form','React Router', 'TypeScript', 'React Router', 'framer-motion'],
       liveUrl: 'https://codemapuser.netlify.app',
-      githubUrl: 'https://github.com/CodeMapGp/Roadmap',
-      featured: false
+      githubUrl: 'https://github.com/mariamelsayed12/Codemap-Graduation-Project',
+      featured: true
     },
     {
       id: 3,
@@ -49,10 +49,94 @@ export const Projects = () => {
       description: 'A modern, responsive portfolio website with smooth animations, dark mode, and optimized performance.',
       image: 'https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop',
       technologies: ['React', 'TypeScript', 'Framer Motion', 'Tailwind CSS'],
-      liveUrl: '#',
+      liveUrl: 'https://my-portflio-mauve.vercel.app/',
       githubUrl: 'https://github.com/mariamelsayed12/My-portflio',
       featured: false
-    }
+    },
+    {
+      id: 7,
+      title: 'Responsive Website UI – Freelance Front-End Project',
+      description: 'Collaborated with a Front-End Engineer to develop a modern responsive website using React.js and Tailwind CSS. Designed and implemented four fully responsive and visually consistent pages, focusing on clean layouts, reusable components, and mobile-friendly styling.',
+      image: 'https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop',
+      technologies: ['React', 'TypeScript','Tailwind CSS'],
+      liveUrl: 'https://leaning-website.vercel.app',
+      githubUrl: 'https://github.com/mariamelsayed12/Leaning_website',
+      featured: false
+    },
+    {
+      id: 8,
+      title: 'Custom Web Pages Development – Team Front-End Task',
+      description:'Worked closely with a Front-End Engineer to build and style multiple custom pages using React.js and Tailwind CSS. Focused on implementing clean UI components, ensuring responsiveness, and maintaining consistent design across all pages.',
+      image: 'https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop',
+      technologies: ['React', 'TypeScript','Tailwind CSS'],
+      githubUrl: 'https://github.com/mariamelsayed12/new-website',
+      featured: false
+    },
+    {
+      id: 9,
+      title: 'CodeMap-Dashboard-graduation-project',
+      description:'Built a dynamic admin dashboard leveraging Next.js, Redux Toolkit and Tailwind CSS',
+      image: 'https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop',
+      technologies: ['Next.js', 'Redux Toolkit','Tailwind CSS','React.js'],
+      liveUrl: 'https://dashboard-roadmap.netlify.app',
+      githubUrl: 'https://github.com/mariamelsayed12/Codemap-Dashboard-Graduation-project',
+      featured: false
+    },
+    {
+      id: 10,
+      title:'Normalized-DCG-Calculator-in-Python',
+      description:' This Python script calculates DCG and NDCG for ranked lists to measure ranking performance. Useful for evaluating search engines and recommendation systems. ',
+      image: 'https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop',
+      technologies: ['python'],
+      githubUrl: 'https://github.com/mariamelsayed12/Normalized-DCG-Calculator-in-Python',
+      featured: false
+    },
+    {
+      id: 11,
+      title:'Python-Midpoint-Circle-Algorithm',
+      description:' A simple Python implementation of the Midpoint Circle Drawing Algorithm to calculate and plot circle points in all four quadrants using matplotlib. ',
+      image: 'https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop',
+      technologies: ['python'],
+      githubUrl: 'https://github.com/mariamelsayed12/Python-Midpoint-Circle-Algorithm',
+      featured: false
+    },
+    {
+      id: 12,
+      title:'Python-DDA-Algorithm',
+      description:'A simple Python implementation of the DDA (Digital Differential Analyzer) algorithm for line drawing using Matplotlib.',
+      image: 'https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop',
+      technologies: ['python'],
+      githubUrl: 'https://github.com/mariamelsayed12/Python-DDA-Algorithm',
+      featured: false
+    },
+    {
+      id: 13,
+      title:'Polynomial-Linked-List-Operations',
+      description:'A Java implementation of polynomial representation using linked lists. Supports insertion, addition, subtraction, multiplication, and evaluation of polynomials with dynamic term management. Demonstrates fundamental data structures and operations on linked nodes. ',
+      image: 'https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop',
+      technologies: ['Java'],
+      githubUrl: 'https://github.com/mariamelsayed12/Polynomial-Linked-List-Operations',
+      featured: false
+    },
+    {
+      id: 14,
+      title:'Turing-Machine-Simulator',
+      description:'A simple Java-based Turing Machine simulator that takes custom states, input alphabet, machine alphabet, and transition rules to process an input string and determine if it is accepted or rejected. Demonstrates concepts of automata theory, state transitions, and low-level computation modeling.',
+      image: 'https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop',
+      technologies: ['Java'],
+      githubUrl: 'https://github.com/mariamelsayed12/Turing-Machine-Simulator',
+      featured: false
+    },
+    {
+      id: 15,
+      title:'Infix-to-Postfix-Converter-and-Evaluator ',
+      description:' A simple Java application that converts an infix mathematical expression to a postfix (Reverse Polish Notation) expression and evaluates its result. This project demonstrates stack operations, operator precedence, and expression parsing using custom stack implementations. ',
+      image: 'https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop',
+      technologies: ['Java'],
+      githubUrl: 'https://github.com/mariamelsayed12/Infix-to-Postfix-Converter-and-Evaluator',
+      featured: false
+    },
+
   ];
 
   const featuredProjects = projects.filter(project => project.featured);
@@ -215,6 +299,7 @@ export const Projects = () => {
                   <div className="flex space-x-2">
                     <motion.a
                       href={project.liveUrl}
+                      target="_blank"
                       className="p-2 text-gray-400 hover:text-[#ffcb74] transition-colors duration-200"
                       whileHover={{ scale: 1.1 }}
                       whileTap={{ scale: 0.95 }}
@@ -223,6 +308,7 @@ export const Projects = () => {
                     </motion.a>
                     <motion.a
                       href={project.githubUrl}
+                      target="_blank"
                       className="p-2 text-gray-400 hover:text-gray-600 dark:hover:text-gray-200 transition-colors duration-200"
                       whileHover={{ scale: 1.1 }}
                       whileTap={{ scale: 0.95 }}

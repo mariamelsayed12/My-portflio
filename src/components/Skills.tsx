@@ -8,12 +8,12 @@ export const Skills = () => {
       icon: Code,
       color: 'from-lime-500 to-green-500',
       skills: [
-        { name: 'React', level: 90 },
-        { name: 'TypeScript', level: 90 },
+        { name: 'React', level: 85 },
+        { name: 'TypeScript', level: 85 },
         { name: 'Next.js', level: 85 },
-        { name: 'Tailwind CSS', level: 95 },
+        { name: 'Tailwind CSS', level: 85 },
         { name: 'Framer Motion', level: 70 },
-        { name: 'Redux Toolkit Query, RTK Query', level: 95 },
+        { name: 'Redux Toolkit Query, RTK Query', level: 85 },
       ]
     },
     {
@@ -21,10 +21,13 @@ export const Skills = () => {
       icon: Palette,
       color: ' from-amber-200 to-[#ffcb74]',
       skills: [
-        { name: 'HTML5', level: 95 },
-        { name: 'CSS3', level: 90 },
+        { name: 'HTML5', level: 85 },
+        { name: 'CSS3', level: 85 },
         { name: 'JavaScript', level: 85 },
-        { name: 'typeScript', level: 90},
+        { name: 'typeScript', level: 85},
+        { name: 'Java', level: 70 },
+        { name: 'Python', level: 50},
+        { name: 'go', level: 50 },
       ]
     },
     {
@@ -49,6 +52,7 @@ export const Skills = () => {
         { name: 'postman', level: 85 },
         { name: 'figma', level: 60 },
         { name: 'yarn', level: 85 },
+        { name: 'netbeans', level: 70 },
         
       ]
     }
