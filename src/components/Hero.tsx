@@ -58,7 +58,7 @@ export const Hero = () => {
           className="mb-8"
           variants={itemVariants}
         >
-          <div className="relative inline-block">
+          {/* <div className="relative inline-block">
             <motion.img
               src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=300&h=300&fit=crop"
               alt="Profile"
@@ -71,7 +71,7 @@ export const Hero = () => {
               animate={{ rotate: 360 }}
               transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
             />
-          </div>
+          </div> */}
         </motion.div>
 
         <motion.h1

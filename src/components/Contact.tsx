@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Mail, Phone, MapPin, Send, Github, Linkedin, Twitter } from 'lucide-react';
+import { Mail, Phone, MapPin, Send, Github, Linkedin } from 'lucide-react';
 import { useState } from 'react';
 
 export const Contact = () => {
@@ -36,34 +36,33 @@ export const Contact = () => {
     {
       icon: Mail,
       label: 'Email',
-      value: 'alex@example.com',
-      href: 'mailto:alex@example.com',
+      value: 'ms9441505@gmail.com',
+      href: 'mailto:ms9441505@gmail.com',
       color: 'from-red-500 to-pink-500'
     },
     {
       icon: Phone,
       label: 'Phone',
-      value: '+1 (555) 123-4567',
-      href: 'tel:+15551234567',
+      value: '01273603151',
+      href: 'tel:+01273603151',
       color: 'from-green-500 to-emerald-500'
     },
     {
       icon: MapPin,
       label: 'Location',
-      value: 'San Francisco, CA',
+      value: 'Alexandria, Egypt.',
       href: '#',
       color: 'from-blue-500 to-cyan-500'
     }
   ];
 
   const socialLinks = [
-    { icon: Github, href: '#', color: 'hover:text-gray-800 dark:hover:text-white' },
-    { icon: Linkedin, href: '#', color: 'hover:text-blue-600' },
-    { icon: Twitter, href: '#', color: 'hover:text-blue-400' },
+    { icon: Github, href: 'https://github.com/mariamelsayed12', color: 'hover:text-gray-800 dark:hover:text-white' },
+    { icon: Linkedin, href: 'https://www.linkedin.com/in/mariam-elsayed123', color: 'hover:text-blue-600' },
   ];
 
   return (
-    <section id="contact" className="py-20 bg-gradient-to-br from-primary-50 via-accent-50 to-primary-100 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 relative overflow-hidden">
+    <section id="contact" className="py-20 bg-[#f6f6f6] dark:bg-[#111111] relative overflow-hidden">
       {/* Animated Background Elements */}
       <div className="absolute inset-0">
         {[...Array(25)].map((_, i) => (
@@ -73,11 +72,7 @@ export const Contact = () => {
             style={{
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`,
-              background: `linear-gradient(45deg, ${
-                ['#3b82f6', '#8b5cf6', '#ec4899', '#10b981', '#f59e0b'][Math.floor(Math.random() * 5)]
-              }, ${
-                ['#06b6d4', '#a855f7', '#f97316', '#ef4444', '#84cc16'][Math.floor(Math.random() * 5)]
-              })`
+              background: '#ffcb74'
             }}
             animate={{
               y: [0, -30, 0],
@@ -92,7 +87,6 @@ export const Contact = () => {
           />
         ))}
       </div>
-
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <motion.div
           className="text-center mb-16"
@@ -102,11 +96,11 @@ export const Contact = () => {
           viewport={{ once: true }}
         >
           <h2 className="text-4xl sm:text-5xl font-bold mb-4">
-            <span className="bg-gradient-to-r from-primary-600 via-accent-500 to-primary-600 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-amber-500 via-amber-300 to-amber-500  dark:from-[#ffcb74] dark:via-amber-300 dark:to-[#ffcb74] bg-clip-text text-transparent">
               Let's Work Together
             </span>
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-primary-500 to-accent-500 mx-auto rounded-full" />
+          <div className="w-24 h-1 bg-[#ffcb74] mx-auto rounded-full" />
           <p className="text-lg text-gray-600 dark:text-gray-300 mt-6 max-w-2xl mx-auto">
             Have a project in mind? Let's discuss how we can bring your ideas to life!
           </p>
@@ -137,7 +131,7 @@ export const Contact = () => {
                 <motion.a
                   key={info.label}
                   href={info.href}
-                  className="flex items-center space-x-4 p-4 bg-white dark:bg-gray-800 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-gray-700 group"
+                  className="flex items-center space-x-4 p-4 bg-white dark:bg-[#2f2f2f] rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-[#2f2f2f] group"
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ delay: index * 0.1, duration: 0.5 }}
@@ -145,9 +139,9 @@ export const Contact = () => {
                   whileHover={{ scale: 1.02, y: -2 }}
                 >
                   <motion.div
-                    className={`w-12 h-12 rounded-xl bg-gradient-to-r ${info.color} flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}
+                    className="w-12 h-12 rounded-xl bg-[#ffcb74] flex items-center justify-center group-hover:scale-110 transition-transform duration-300"
                   >
-                    <info.icon className="text-white" size={20} />
+                    <info.icon className="text-[#2f2f2f]" size={20} />
                   </motion.div>
                   <div>
                     <p className="text-sm text-gray-500 dark:text-gray-400">{info.label}</p>
@@ -169,11 +163,12 @@ export const Contact = () => {
                 Follow Me
               </h4>
               <div className="flex space-x-4">
-                {socialLinks.map(({ icon: Icon, href, color }, index) => (
+                {socialLinks.map(({ icon: Icon, href }, index) => (
                   <motion.a
                     key={index}
                     href={href}
-                    className={`p-3 bg-white dark:bg-gray-800 rounded-xl shadow-lg text-gray-600 dark:text-gray-400 ${color} transition-all duration-300 border border-gray-100 dark:border-gray-700`}
+                    target="_blank"
+                    className="p-3 bg-white dark:bg-[#2f2f2f] rounded-xl shadow-lg text-gray-600 dark:text-gray-400 hover:text-[#ffcb74] transition-all duration-300 border border-gray-100 dark:border-[#2f2f2f]"
                     whileHover={{ scale: 1.1, y: -2 }}
                     whileTap={{ scale: 0.95 }}
                     initial={{ opacity: 0, scale: 0.5 }}
@@ -190,7 +185,7 @@ export const Contact = () => {
 
           {/* Contact Form */}
           <motion.div
-            className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-2xl border border-gray-100 dark:border-gray-700"
+            className="bg-white dark:bg-[#2f2f2f] rounded-2xl p-8 shadow-2xl border border-gray-100 dark:border-[#2f2f2f]"
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
@@ -208,8 +203,8 @@ export const Contact = () => {
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-primary-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white transition-all duration-300"
-                  placeholder="John Doe"
+                  className="w-full px-4 py-3 border border-gray-300 dark:border-[#2f2f2f] rounded-xl focus:ring-2 focus:ring-[#ffcb74] focus:border-transparent bg-white dark:bg-[#111111] text-gray-900 dark:text-white transition-all duration-300"
+                  placeholder="Your Name"
                   whileFocus={{ scale: 1.02 }}
                 />
               </div>
@@ -225,7 +220,7 @@ export const Contact = () => {
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-primary-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white transition-all duration-300"
+                  className="w-full px-4 py-3 border border-gray-300 dark:border-[#2f2f2f] rounded-xl focus:ring-2 focus:ring-[#ffcb74] focus:border-transparent bg-white dark:bg-[#111111] text-gray-900 dark:text-white transition-all duration-300"
                   placeholder="john@example.com"
                   whileFocus={{ scale: 1.02 }}
                 />
@@ -242,7 +237,7 @@ export const Contact = () => {
                   onChange={handleChange}
                   required
                   rows={5}
-                  className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-primary-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white transition-all duration-300 resize-none"
+                  className="w-full px-4 py-3 border border-gray-300 dark:border-[#2f2f2f] rounded-xl focus:ring-2 focus:ring-[#ffcb74] focus:border-transparent bg-white dark:bg-[#111111] text-gray-900 dark:text-white transition-all duration-300 resize-none"
                   placeholder="Tell me about your project..."
                   whileFocus={{ scale: 1.02 }}
                 />
@@ -251,7 +246,7 @@ export const Contact = () => {
               <motion.button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full px-8 py-4 bg-gradient-to-r from-primary-500 to-accent-500 text-white rounded-xl font-semibold text-lg shadow-lg hover:shadow-xl transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center space-x-2"
+                className="w-full px-8 py-4 bg-[#ffcb74] hover:bg-[#ffcb74]/90 text-[#2f2f2f] rounded-xl font-semibold text-lg shadow-lg hover:shadow-xl transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center space-x-2"
                 whileHover={{ scale: 1.02, y: -2 }}
                 whileTap={{ scale: 0.98 }}
               >
@@ -266,7 +261,7 @@ export const Contact = () => {
                   </>
                 ) : (
                   <>
-                    <Send size={20} />
+                    <Send className="text-[#2f2f2f]" size={20} />
                     <span>Send Message</span>
                   </>
                 )}
@@ -276,8 +271,8 @@ export const Contact = () => {
         </div>
 
         {/* Bottom CTA */}
-        <motion.div
-          className="text-center mt-16 p-8 bg-gradient-to-r from-primary-500 to-accent-500 rounded-2xl text-white"
+        {/* <motion.div
+          className="text-center mt-16 p-8 bg-[#ffcb74] rounded-2xl text-[#2f2f2f]"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.6, duration: 0.6 }}
@@ -288,13 +283,13 @@ export const Contact = () => {
             Let's create something amazing together. I'm just one message away!
           </p>
           <motion.button
-            className="px-8 py-3 bg-white text-primary-600 rounded-full font-semibold hover:bg-gray-100 transition-colors duration-300"
+            className="px-8 py-3 bg-white text-[#2f2f2f] rounded-full font-semibold hover:bg-[#f6f6f6] transition-colors duration-300"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
             Start a Conversation
           </motion.button>
-        </motion.div>
+        </motion.div> */}
       </div>
     </section>
   );

@@ -25,7 +25,7 @@ function App() {
 
       {/* Footer */}
       <motion.footer
-        className="bg-gray-900 dark:bg-black text-white py-8"
+        className="bg-[#111111] dark:bg-[#2f2f2f] text-white py-8"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.6 }}
@@ -36,7 +36,7 @@ function App() {
             className="text-gray-400"
             whileHover={{ scale: 1.05 }}
           >
-            © 2025 Alex Portfolio. Made with ❤️ and lots of ☕
+            © 2025 Alex My Portfolio. Made with ❤️ and 
           </motion.p>
         </div>
       </motion.footer>

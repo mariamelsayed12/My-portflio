@@ -8,15 +8,15 @@
 }
 
 ::-webkit-scrollbar-track {
-  @apply bg-gray-100 dark:bg-gray-800;
+  @apply bg-[#f6f6f6] dark:bg-[#2f2f2f];
 }
 
 ::-webkit-scrollbar-thumb {
-  @apply bg-gradient-to-b from-primary-500 to-accent-500 rounded-full;
+  @apply bg-gradient-to-b from-[#ffcb74] to-[#ffcb74]/80 rounded-full;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  @apply from-primary-600 to-accent-600;
+  @apply from-[#ffcb74]/90 to-[#ffcb74]/70;
 }
 
 /* Smooth scrolling */
@@ -26,11 +26,11 @@ html {
 
 /* Custom selection */
 ::selection {
-  @apply bg-primary-500 text-white;
+  @apply bg-[#ffcb74] text-[#2f2f2f];
 }
 
 ::-moz-selection {
-  @apply bg-primary-500 text-white;
+  @apply bg-[#ffcb74] text-[#2f2f2f];
 }
 
 /* Focus styles */
@@ -45,8 +45,8 @@ html {
 }
 
 @keyframes glow {
-  0% { box-shadow: 0 0 5px #3b82f6, 0 0 10px #3b82f6, 0 0 15px #3b82f6; }
-  100% { box-shadow: 0 0 10px #8b5cf6, 0 0 20px #8b5cf6, 0 0 30px #8b5cf6; }
+  0% { box-shadow: 0 0 5px #ffcb74, 0 0 10px #ffcb74, 0 0 15px #ffcb74; }
+  100% { box-shadow: 0 0 10px #ffcb74, 0 0 20px #ffcb74, 0 0 30px #ffcb74; }
 }
 
 .animate-float {
@@ -76,4 +76,74 @@ html {
 
 .animate-spin {
   animation: spin 1s linear infinite;
+}
+
+/* Theme-specific body styles */
+body {
+  @apply bg-[#f6f6f6] dark:bg-[#111111] text-[#2f2f2f] dark:text-[#f6f6f6];
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Custom theme utilities */
+.theme-bg-primary {
+  @apply bg-[#f6f6f6] dark:bg-[#111111];
+}
+
+.theme-bg-secondary {
+  @apply bg-white dark:bg-[#2f2f2f];
+}
+
+.theme-text-primary {
+  @apply text-[#2f2f2f] dark:text-[#f6f6f6];
+}
+
+.theme-text-secondary {
+  @apply text-[#2f2f2f]/70 dark:text-[#f6f6f6]/70;
+}
+
+.theme-accent {
+  @apply text-[#ffcb74];
+}
+
+.theme-accent-bg {
+  @apply bg-[#ffcb74];
+}
+
+.theme-border {
+  @apply border-[#f6f6f6] dark:border-[#2f2f2f];
+}
+
+/* Enhanced focus styles with theme colors */
+*:focus-visible {
+  outline: 2px solid #ffcb74;
+  outline-offset: 2px;
+}
+
+/* Custom button styles */
+.theme-button-primary {
+  @apply bg-[#ffcb74] text-[#2f2f2f] hover:bg-[#ffcb74]/90 transition-all duration-300;
+}
+
+.theme-button-secondary {
+  @apply border-2 border-[#ffcb74] text-[#ffcb74] hover:bg-[#ffcb74] hover:text-[#2f2f2f] transition-all duration-300;
+}
+
+/* Enhanced glow effect with theme colors */
+@keyframes theme-glow {
+  0% { 
+    box-shadow: 0 0 5px #ffcb74, 0 0 10px #ffcb74, 0 0 15px #ffcb74;
+    transform: scale(1);
+  }
+  50% { 
+    box-shadow: 0 0 10px #ffcb74, 0 0 20px #ffcb74, 0 0 30px #ffcb74;
+    transform: scale(1.02);
+  }
+  100% { 
+    box-shadow: 0 0 5px #ffcb74, 0 0 10px #ffcb74, 0 0 15px #ffcb74;
+    transform: scale(1);
+  }
+}
+
+.animate-theme-glow {
+  animation: theme-glow 3s ease-in-out infinite;
 }
