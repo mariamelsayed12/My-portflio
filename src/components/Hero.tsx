@@ -73,7 +73,6 @@ export const Hero = () => {
             />
           </div> */}
         </motion.div>
-
         <motion.h1
           className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-6"
           variants={itemVariants}
@@ -82,7 +81,6 @@ export const Hero = () => {
             Hi, I'm Mariam 
           </span>
         </motion.h1>
-
         <motion.h2
           className="text-2xl sm:text-3xl lg:text-4xl font-semibold mb-6 text-gray-700 dark:text-gray-300"
           variants={itemVariants}
@@ -97,20 +95,20 @@ export const Hero = () => {
             />
           </span>
         </motion.h2>
-
         <motion.p
           className="text-lg sm:text-xl text-gray-600 dark:text-gray-400 mb-8 max-w-2xl mx-auto leading-relaxed"
           variants={itemVariants}
-        >
-          I create beautiful, interactive, and user-friendly web experiences with modern technologies.
-          Let's build something amazing together!
+        >  
+           I create beautiful, interactive, and user-friendly web experiences with modern technologies.
+  I focus on writing clean, maintainable code and crafting responsive interfaces that work seamlessly across devices.
+  Let&apos;s build something amazing together and turn ideas into reality!
         </motion.p>
 
         <motion.div
           className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12"
           variants={itemVariants}
         >
-          <motion.button
+          {/* <motion.button
             className="px-8 py-4 bg-gradient-to-r from-[#ffcb74] to-amber-300 dark:from-[#ffcb74] dark:to-[#f6f6f6]  text-[#2f2f2f] rounded-full font-semibold text-lg shadow-lg hover:shadow-xl transition-all duration-300"
             whileHover={{ scale: 1.05, y: -2 }}
             whileTap={{ scale: 0.95 }}
@@ -124,9 +122,8 @@ export const Hero = () => {
             whileTap={{ scale: 0.95 }}
           >
             Download CV
-          </motion.button>
+          </motion.button> */}
         </motion.div>
-
         <motion.div
           className="flex justify-center space-x-6 mb-12"
           variants={itemVariants}
