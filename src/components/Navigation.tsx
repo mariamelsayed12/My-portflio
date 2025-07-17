@@ -25,9 +25,9 @@ export const Navigation = () => {
 
   return (
     <motion.nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50  transition-all duration-300 ${
         scrolled
-          ? 'bg-white/80 dark:bg-gray-900/80 backdrop-blur-md shadow-lg'
+          ? 'bg-white/80 dark:bg-[#2f2f2f]/80 backdrop-blur-md shadow-lg'
           : 'bg-transparent'
       }`}
       initial={{ y: -100 }}
@@ -37,7 +37,7 @@ export const Navigation = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
           <motion.div
-            className="text-2xl font-bold bg-gradient-to-r from-primary-500 to-accent-500 bg-clip-text text-transparent"
+            className="text-2xl font-bold bg-gradient-to-r from-[#ffcb74] to-amber-300 dark:from-[#ffcb74] dark:to-[#f6f6f6] bg-clip-text text-transparent"
             whileHover={{ scale: 1.05 }}
           >
             Portfolio
@@ -49,7 +49,7 @@ export const Navigation = () => {
               <motion.a
                 key={item.name}
                 href={item.href}
-                className="relative text-gray-700 dark:text-gray-300 hover:text-primary-500 dark:hover:text-primary-400 transition-colors duration-300"
+                className="relative text-gray-700 dark:text-gray-300 hover:text-amber-500 dark:hover:text-[#ffcb74] transition-colors duration-300"
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}
@@ -57,7 +57,7 @@ export const Navigation = () => {
               >
                 {item.name}
                 <motion.div
-                  className="absolute -bottom-1 left-0 right-0 h-0.5 bg-gradient-to-r from-primary-500 to-accent-500"
+                  className="absolute -bottom-1 left-0 right-0 h-0.5 bg-gradient-to-r from-[#ffcb74] to-amber-300 dark:from-[#ffcb74] dark:to-[#f6f6f6]"
                   initial={{ scaleX: 0 }}
                   whileHover={{ scaleX: 1 }}
                   transition={{ duration: 0.3 }}
@@ -72,7 +72,7 @@ export const Navigation = () => {
             <ThemeToggle />
             <motion.button
               onClick={() => setIsOpen(!isOpen)}
-              className="p-2 rounded-lg bg-gradient-to-r from-primary-500 to-accent-500 text-white"
+              className="p-2 rounded-lg bg-gradient-to-r from-[#ffcb74] to-amber-300 dark:from-[#ffcb74] dark:to-[#f6f6f6] text-[#2f2f2f]"
               whileTap={{ scale: 0.95 }}
             >
               {isOpen ? <X size={24} /> : <Menu size={24} />}
@@ -87,12 +87,12 @@ export const Navigation = () => {
           animate={{ opacity: isOpen ? 1 : 0, height: isOpen ? 'auto' : 0 }}
           transition={{ duration: 0.3 }}
         >
-          <div className="py-4 space-y-4 bg-white/90 dark:bg-gray-900/90 backdrop-blur-md rounded-lg mt-2">
+          <div className="py-4 space-y-4 bg-white/90 dark:bg-[#2f2f2f]/90 backdrop-blur-md rounded-lg mt-2">
             {navItems.map((item) => (
               <motion.a
                 key={item.name}
                 href={item.href}
-                className="block px-4 py-2 text-gray-700 dark:text-gray-300 hover:text-primary-500 dark:hover:text-primary-400 transition-colors duration-300"
+                className="block px-4 py-2 text-gray-700 dark:text-gray-300 hover:text-amber-500 dark:hover:text-[#ffcb74] transition-colors duration-300"
                 onClick={() => setIsOpen(false)}
                 whileHover={{ x: 10 }}
               >

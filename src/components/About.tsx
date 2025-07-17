@@ -7,13 +7,13 @@ export const About = () => {
       icon: Code,
       title: 'Clean Code',
       description: 'Writing maintainable, scalable, and efficient code is my passion.',
-      color: 'from-blue-500 to-cyan-500'
+      color: 'from-lime-500 to-green-500'
     },
     {
       icon: Palette,
       title: 'Creative Design',
       description: 'Bringing creative ideas to life with beautiful user interfaces.',
-      color: 'from-purple-500 to-pink-500'
+      color: 'from-teal-500 to-cyan-500'
     },
     {
       icon: Zap,
@@ -25,18 +25,18 @@ export const About = () => {
       icon: Heart,
       title: 'User-Focused',
       description: 'Creating intuitive experiences that users love and enjoy.',
-      color: 'from-red-500 to-pink-500'
+      color: 'from-emerald-800 to-emerald-500'
     }
   ];
 
   return (
-    <section id="about" className="py-20 bg-white dark:bg-gray-900 relative overflow-hidden">
+    <section id="about" className="py-20 bg-white dark:bg-[#111111] relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
-        <div className="absolute inset-0 bg-gradient-to-r from-primary-500 to-accent-500" 
-             style={{
-               backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23000' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
-             }}
+        <div className="absolute inset-0 bg-gradient-to-r from-[#ffcb74] to-amber-300" 
+              style={{
+                backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23000' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
+              }}
         />
       </div>
 
@@ -49,11 +49,11 @@ export const About = () => {
           viewport={{ once: true }}
         >
           <h2 className="text-4xl sm:text-5xl font-bold mb-4">
-            <span className="bg-gradient-to-r from-primary-600 to-accent-600 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-amber-500 via-amber-300 to-amber-500  dark:from-[#ffcb74] dark:via-amber-300 dark:to-[#ffcb74]  bg-clip-text text-transparent">
               About Me
             </span>
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-primary-500 to-accent-500 mx-auto rounded-full" />
+          <div className="w-24 h-1 bg-gradient-to-r from-[#ffcb74] to-amber-300 dark:from-[#ffcb74] dark:to-[#f6f6f6] mx-auto rounded-full" />
         </motion.div>
 
         <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
@@ -72,7 +72,7 @@ export const About = () => {
                 transition={{ duration: 0.3 }}
               />
               <motion.div
-                className="absolute -inset-4 bg-gradient-to-r from-primary-500 to-accent-500 rounded-2xl opacity-20 blur-xl"
+                className="absolute -inset-4 bg-gradient-to-r from-[#ffcb74] to-amber-300 rounded-2xl opacity-20 blur-xl"
                 animate={{ rotate: [0, 1, -1, 0] }}
                 transition={{ duration: 6, repeat: Infinity }}
               />
@@ -90,7 +90,7 @@ export const About = () => {
               Passionate Developer & Creative Thinker
             </h3>
             <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
-              With over 5 years of experience in front-end development, I specialize in creating 
+              With over 2 years of experience in front-end development, I specialize in creating 
               modern, responsive, and user-friendly web applications. I'm passionate about 
               combining creativity with functionality to deliver exceptional digital experiences.
             </p>
@@ -107,10 +107,15 @@ export const About = () => {
               transition={{ delay: 0.4, duration: 0.6 }}
               viewport={{ once: true }}
             >
-              {['React', 'TypeScript', 'Next.js', 'Tailwind CSS', 'Node.js'].map((tech, index) => (
+              {['React.js', 'TypeScript', 'Next.js', 'Tailwind CSS', 'Bootstrap', 'Chakra UI','shadcn/ui',' MongoDB'].map((tech, index) => (
                 <motion.span
                   key={tech}
-                  className="px-4 py-2 bg-gradient-to-r from-primary-100 to-accent-100 dark:from-primary-900 dark:to-accent-900 text-primary-700 dark:text-primary-300 rounded-full text-sm font-medium"
+              className="
+              px-4 py-2 
+  bg-gradient-to-r from-[#cbcbcb] to-[#ffcb74] 
+  dark:from-gray-700 dark:to-[#ffcb74] 
+  text-[#1f1f1f] dark:text-[#f6f6f6] 
+  rounded-full text-sm font-medium"
                   whileHover={{ scale: 1.05 }}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -141,7 +146,7 @@ export const About = () => {
               viewport={{ once: true }}
               whileHover={{ y: -5 }}
             >
-              <div className="bg-white dark:bg-gray-800 p-6 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 dark:border-gray-700 h-full">
+              <div className="bg-white dark:bg-[#2f2f2f] p-6 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 dark:border-gray-700 h-full">
                 <motion.div
                   className={`w-12 h-12 rounded-xl bg-gradient-to-r ${feature.color} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}
                 >

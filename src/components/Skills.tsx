@@ -6,61 +6,62 @@ export const Skills = () => {
     {
       title: 'Frontend',
       icon: Code,
-      color: 'from-blue-500 to-cyan-500',
+      color: 'from-lime-500 to-green-500',
       skills: [
-        { name: 'React', level: 95 },
+        { name: 'React', level: 90 },
         { name: 'TypeScript', level: 90 },
         { name: 'Next.js', level: 85 },
-        { name: 'Tailwind CSS', level: 92 },
-        { name: 'Framer Motion', level: 80 },
+        { name: 'Tailwind CSS', level: 95 },
+        { name: 'Framer Motion', level: 70 },
+        { name: 'Redux Toolkit Query, RTK Query', level: 95 },
       ]
     },
     {
-      title: 'Design',
+      title: 'Programming Languages',
       icon: Palette,
-      color: 'from-purple-500 to-pink-500',
+      color: ' from-amber-200 to-[#ffcb74]',
       skills: [
-        { name: 'UI/UX Design', level: 85 },
-        { name: 'Figma', level: 88 },
-        { name: 'Adobe XD', level: 75 },
-        { name: 'Responsive Design', level: 95 },
-        { name: 'Animation', level: 82 },
+        { name: 'HTML5', level: 95 },
+        { name: 'CSS3', level: 90 },
+        { name: 'JavaScript', level: 85 },
+        { name: 'typeScript', level: 90},
       ]
     },
     {
       title: 'Backend',
       icon: Database,
-      color: 'from-green-500 to-emerald-500',
+      color: 'from-yellow-500 to-orange-500',
       skills: [
-        { name: 'Node.js', level: 80 },
-        { name: 'Express', level: 75 },
         { name: 'MongoDB', level: 70 },
-        { name: 'PostgreSQL', level: 72 },
-        { name: 'REST APIs', level: 85 },
+        { name: 'prisma', level: 75 },
+        { name: 'strapi', level: 80 },
+        { name: 'supabase', level: 80 },
       ]
     },
     {
       title: 'Tools',
       icon: Wrench,
-      color: 'from-orange-500 to-red-500',
+      color: ' from-emerald-500 to-emerald-800',
       skills: [
-        { name: 'Git', level: 90 },
-        { name: 'Webpack', level: 75 },
+        { name: 'Git, GitHub', level: 70},
+        { name: 'Visual Studio Code', level: 95 },
         { name: 'Vite', level: 85 },
-        { name: 'Docker', level: 65 },
-        { name: 'AWS', level: 60 },
+        { name: 'postman', level: 85 },
+        { name: 'figma', level: 60 },
+        { name: 'yarn', level: 85 },
+        
       ]
     }
   ];
 
   return (
-    <section id="skills" className="py-20 bg-gray-50 dark:bg-gray-800 relative overflow-hidden">
+    <section id="skills" className="py-20 bg-gray-50 dark:bg-[#2f2f2f] relative overflow-hidden">
       {/* Animated Background Elements */}
       <div className="absolute inset-0">
         {[...Array(15)].map((_, i) => (
           <motion.div
             key={i}
-            className="absolute w-1 h-1 bg-primary-400 rounded-full opacity-30"
+            className="absolute w-1 h-1 bg-[#fdc057] rounded-full opacity-30"
             style={{
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`,
@@ -87,11 +88,11 @@ export const Skills = () => {
           viewport={{ once: true }}
         >
           <h2 className="text-4xl sm:text-5xl font-bold mb-4">
-            <span className="bg-gradient-to-r from-primary-600 to-accent-600 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-amber-500 via-amber-300 to-amber-500  dark:from-[#ffcb74] dark:via-amber-300 dark:to-[#ffcb74] bg-clip-text text-transparent">
               Skills & Expertise
             </span>
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-primary-500 to-accent-500 mx-auto rounded-full" />
+          <div className="w-24 h-1 bg-gradient-to-r from-[#ffcb74] to-amber-300 dark:from-[#ffcb74] dark:to-[#f6f6f6] mx-auto rounded-full" />
           <p className="text-lg text-gray-600 dark:text-gray-300 mt-6 max-w-2xl mx-auto">
             Here are the technologies and tools I work with to create amazing digital experiences
           </p>
@@ -101,7 +102,7 @@ export const Skills = () => {
           {skillCategories.map((category, categoryIndex) => (
             <motion.div
               key={category.title}
-              className="bg-white dark:bg-gray-900 rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 dark:border-gray-700"
+              className="bg-white dark:bg-[#111111] rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 dark:border-gray-700"
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: categoryIndex * 0.1, duration: 0.6 }}
@@ -162,9 +163,9 @@ export const Skills = () => {
           viewport={{ once: true }}
         >
           {[
-            { number: '50+', label: 'Projects Completed' },
-            { number: '5+', label: 'Years Experience' },
-            { number: '30+', label: 'Happy Clients' },
+            { number: '8+', label: 'Projects Completed' },
+            { number: '2+', label: 'Years Experience' },
+            { number: '3+', label: 'Happy Clients' },
             { number: '15+', label: 'Technologies' },
           ].map((stat, index) => (
             <motion.div
@@ -177,7 +178,7 @@ export const Skills = () => {
               whileHover={{ scale: 1.05 }}
             >
               <motion.div
-                className="text-3xl sm:text-4xl font-bold bg-gradient-to-r from-primary-600 to-accent-600 bg-clip-text text-transparent mb-2"
+                className="text-3xl sm:text-4xl font-bold bg-gradient-to-r from-[#ffcb74] to-amber-300 dark:from-[#ffcb74] dark:to-[#f6f6f6] bg-clip-text text-transparent mb-2"
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 transition={{ delay: 0.7 + index * 0.1 }}
