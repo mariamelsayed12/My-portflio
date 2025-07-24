@@ -39,7 +39,7 @@ function App() {
             className="text-gray-400"
             whileHover={{ scale: 1.05 }}
           >
-            © 2025 Alex My Portfolio. Made with ❤️ and 
+            © 2025 Alex My Portfolio 
           </motion.p>
         </div>
       </motion.footer>

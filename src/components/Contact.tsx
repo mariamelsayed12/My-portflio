@@ -290,26 +290,7 @@ export const Contact = () => {
           </motion.div>
         </div>
 
-        {/* Bottom CTA */}
-        {/* <motion.div
-          className="text-center mt-16 p-8 bg-[#ffcb74] rounded-2xl text-[#2f2f2f]"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.6, duration: 0.6 }}
-          viewport={{ once: true }}
-        >
-          <h3 className="text-2xl font-bold mb-4">Ready to Start Your Project?</h3>
-          <p className="text-lg opacity-90 mb-6">
-            Let's create something amazing together. I'm just one message away!
-          </p>
-          <motion.button
-            className="px-8 py-3 bg-white text-[#2f2f2f] rounded-full font-semibold hover:bg-[#f6f6f6] transition-colors duration-300"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            Start a Conversation
-          </motion.button>
-        </motion.div> */}
+        
       </div>
     </section>
   );
