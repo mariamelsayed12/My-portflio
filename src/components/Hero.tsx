@@ -99,30 +99,36 @@ export const Hero = () => {
           className="text-lg sm:text-xl text-gray-600 dark:text-gray-400 mb-8 max-w-2xl mx-auto leading-relaxed"
           variants={itemVariants}
         >  
-           I create beautiful, interactive, and user-friendly web experiences with modern technologies.
-  I focus on writing clean, maintainable code and crafting responsive interfaces that work seamlessly across devices.
-  Let&apos;s build something amazing together and turn ideas into reality!
+          I create beautiful, interactive, and user-friendly web experiences with modern technologies.
+          I focus on writing clean, maintainable code and crafting responsive interfaces that work seamlessly across devices.
+          Let&apos;s build something amazing together and turn ideas into reality!
         </motion.p>
 
         <motion.div
           className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12"
           variants={itemVariants}
         >
-          {/* <motion.button
-            className="px-8 py-4 bg-gradient-to-r from-[#ffcb74] to-amber-300 dark:from-[#ffcb74] dark:to-[#f6f6f6]  text-[#2f2f2f] rounded-full font-semibold text-lg shadow-lg hover:shadow-xl transition-all duration-300"
-            whileHover={{ scale: 1.05, y: -2 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            View My Work
-          </motion.button>
+            <motion.a
+          href="#projects"
+          className="px-8 py-4 bg-gradient-to-r from-[#ffcb74] to-amber-300 dark:from-[#ffcb74] dark:to-[#f6f6f6] text-[#2f2f2f] rounded-full font-semibold text-lg shadow-lg hover:shadow-xl transition-all duration-300 inline-block text-center"
+          whileHover={{ scale: 1.05, y: -2 }}
+          whileTap={{ scale: 0.95 }}
+        >
+        View My Work
+        </motion.a>
           
-          <motion.button
-            className="px-8 py-4 border-2 border-[#ffcb74] text-[#2f2f2f] dark:text-[#ffcb74] rounded-full font-semibold text-lg hover:bg-[#ffcb74]  dark:hover:text-[#2f2f2f] transition-all duration-300"
-            whileHover={{ scale: 1.05, y: -2 }}
-            whileTap={{ scale: 0.95 }}
-          >
+
+          
+        <motion.a
+        href="/Mariam_Elsayed_CV.pdf"
+        download
+        className="px-8 py-4 border-2 border-[#ffcb74] text-[#2f2f2f] dark:text-[#ffcb74] rounded-full font-semibold text-lg hover:bg-[#ffcb74] dark:hover:text-[#2f2f2f] transition-all duration-300 inline-block text-center"
+        whileHover={{ scale: 1.05, y: -2 }}
+        whileTap={{ scale: 0.95 }}
+        >
             Download CV
-          </motion.button> */}
+        </motion.a>
+
         </motion.div>
         <motion.div
           className="flex justify-center space-x-6 mb-12"
