@@ -5,6 +5,7 @@ import { Skills } from './components/Skills';
 import { Projects } from './components/Projects';
 import { Contact } from './components/Contact';
 import { motion } from 'framer-motion';
+import { Toaster } from 'react-hot-toast';
 
 function App() {
   return (
@@ -22,6 +23,8 @@ function App() {
         <Projects />
         <Contact />
       </motion.main>
+      <Toaster />
+
 
       {/* Footer */}
       <motion.footer

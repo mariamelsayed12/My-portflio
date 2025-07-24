@@ -1,6 +1,8 @@
 import { motion } from 'framer-motion';
 import { Mail, Phone, MapPin, Send, Github, Linkedin } from 'lucide-react';
 import { useState } from 'react';
+import toast from 'react-hot-toast';
+
 
 export const Contact = () => {
   const [formData, setFormData] = useState({
@@ -11,19 +13,35 @@ export const Contact = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 2000));
-    
-    // Reset form
-    setFormData({ name: '', email: '', message: '' });
+  e.preventDefault();
+  setIsSubmitting(true);
+
+  try {
+    const response = await fetch('https://formspree.io/f/xnnzdqbp', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        name: formData.name,
+        email: formData.email,
+        message: formData.message
+      })
+    });
+
+    if (response.ok) {
+      toast.success('Message sent successfully!');
+      setFormData({ name: '', email: '', message: '' });
+    } else {
+      toast.error('Something went wrong. Please try again.');
+    }
+  } catch (error) {
+    toast.error('Something went wrong. Please try again.');
+    console.log(error);
+  } finally {
     setIsSubmitting(false);
-    
-    // You would typically send the data to your backend here
-    console.log('Form submitted:', formData);
-  };
+  }
+};
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({
@@ -191,7 +209,9 @@ export const Contact = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            <form onSubmit={handleSubmit} className="space-y-6">
+            <form
+            onSubmit={handleSubmit}
+            className="space-y-6">
               <div>
                 <label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                   Your Name
@@ -227,7 +247,7 @@ export const Contact = () => {
               </div>
 
               <div>
-                <label htmlFor="message" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                <label htmlFor="message"  className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                   Message
                 </label>
                 <motion.textarea

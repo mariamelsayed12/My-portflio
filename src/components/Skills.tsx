@@ -40,6 +40,10 @@ export const Skills = () => {
         { name: 'prisma' },
         { name: 'strapi'},
         { name: 'supabase' },
+        { name: 'firebase' },
+        { name: 'MySQL' },
+        { name: 'SQL Server' },
+        
       ]
     },
     {
