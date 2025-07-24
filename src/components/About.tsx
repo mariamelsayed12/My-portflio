@@ -63,16 +63,16 @@ export const About = () => {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <div className="relative">
+            <div className="relative flex items-center justify-center">
               <motion.img
-                src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop"
+                src="/photo_2025-03-06_01-38-20.jpg"
                 alt="About me"
-                className="rounded-2xl shadow-2xl w-full"
+                className="rounded-full shadow-2xl lg:w-96 lg:h-96  md:w-80 md:h-80 w-64 h-64  object-cover"
                 whileHover={{ scale: 1.02 }}
                 transition={{ duration: 0.3 }}
               />
               <motion.div
-                className="absolute -inset-4 bg-gradient-to-r from-[#ffcb74] to-amber-300 rounded-2xl opacity-20 blur-xl"
+                className="absolute inset-14 bg-gradient-to-r from-[#fce1b4] to-[#fddea9] rounded-full opacity-20 blur-3xl"
                 animate={{ rotate: [0, 1, -1, 0] }}
                 transition={{ duration: 6, repeat: Infinity }}
               />

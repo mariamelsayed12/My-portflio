@@ -8,12 +8,13 @@ export const Skills = () => {
       icon: Code,
       color: 'from-lime-500 to-green-500',
       skills: [
-        { name: 'React', level: 85 },
-        { name: 'TypeScript', level: 85 },
-        { name: 'Next.js', level: 85 },
-        { name: 'Tailwind CSS', level: 85 },
-        { name: 'Framer Motion', level: 70 },
-        { name: 'Redux Toolkit Query, RTK Query', level: 85 },
+        { name: 'React' },
+        { name: 'TypeScript' },
+        { name: 'Next.js'},
+        { name: 'Tailwind CSS'},
+        { name: 'Framer Motion' },
+        { name: 'Redux Toolkit Query, RTK Query' },
+        {name: 'Chakra UI & shadcn/ui'},
       ]
     },
     {
@@ -35,10 +36,10 @@ export const Skills = () => {
       icon: Database,
       color: 'from-yellow-500 to-orange-500',
       skills: [
-        { name: 'MongoDB', level: 70 },
-        { name: 'prisma', level: 75 },
-        { name: 'strapi', level: 80 },
-        { name: 'supabase', level: 80 },
+        { name: 'MongoDB' },
+        { name: 'prisma' },
+        { name: 'strapi'},
+        { name: 'supabase' },
       ]
     },
     {
@@ -134,23 +135,13 @@ export const Skills = () => {
                     transition={{ delay: (categoryIndex * 0.1) + (skillIndex * 0.05), duration: 0.4 }}
                     viewport={{ once: true }}
                   >
-                    <div className="flex justify-between items-center mb-2">
+                    <div className="flex justify-between items-center mb-2 border-b border-gray-200 dark:border-gray-700 pb-2">
                       <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
                         {skill.name}
                       </span>
-                      <span className="text-sm text-gray-500 dark:text-gray-400">
-                        {skill.level}%
-                      </span>
+                      
                     </div>
-                    <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
-                      <motion.div
-                        className={`h-2 rounded-full bg-gradient-to-r ${category.color}`}
-                        initial={{ width: 0 }}
-                        whileInView={{ width: `${skill.level}%` }}
-                        transition={{ delay: (categoryIndex * 0.1) + (skillIndex * 0.05) + 0.2, duration: 0.8 }}
-                        viewport={{ once: true }}
-                      />
-                    </div>
+                    
                   </motion.div>
                 ))}
               </div>
